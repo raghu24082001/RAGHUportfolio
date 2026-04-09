@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Raghuram Ravi | Portfolio</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,23 +48,25 @@
     </style>
 </head>
 
-<body class="bg-slate-50 dark:bg-darkBg text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-darkBg text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden">
 
     <div class="blob top-[-10%] left-[-10%]"></div>
     <div class="blob bottom-[10%] right-[-5%]"></div>
 
     <nav class="fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-            <span class="font-bold text-lg md:text-xl tracking-tighter hover:text-accent transition-colors cursor-pointer whitespace-nowrap">Raghuram Ravi</span>
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-2">
+            <span class="font-bold text-lg md:text-xl tracking-tighter hover:text-accent transition-colors cursor-pointer truncate min-w-0">
+                Raghuram Ravi
+            </span>
             
-            <div class="flex items-center gap-4 md:gap-8">
+            <div class="flex items-center gap-3 md:gap-8 flex-shrink-0">
                 <div class="hidden md:flex gap-6 text-sm font-medium">
                     <a href="#skills" class="hover:text-accent transition">Skills</a>
                     <a href="#projects" class="hover:text-accent transition">Projects</a>
                     <a href="#contact" class="hover:text-accent transition">Contact</a>
                 </div>
-                <button onclick="toggleMode()" class="p-2.5 rounded-full bg-blue-500 dark:bg-slate-800 border dark:border-slate-700 transition-transform active:scale-90 flex items-center justify-center min-w-[40px] min-h-[40px]">
-                    <span id="theme-icon" class="leading-none text-lg">🌙</span>
+                <button onclick="toggleMode()" class="flex-shrink-0 p-2.5 rounded-full bg-blue-500 dark:bg-slate-800 border dark:border-slate-700 transition-transform active:scale-90 flex items-center justify-center">
+                    <span id="theme-icon" class="text-base">🌙</span>
                 </button>
             </div>
         </div>
@@ -106,7 +108,7 @@
         <div class="space-y-6">
             <div class="glass p-8 md:p-12 rounded-[2.5rem]">
                 <h3 class="text-center text-xl font-bold mb-10 text-accent uppercase tracking-[0.2em]">Frontend</h3>
-                <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-6 md:gap-12">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-12">
                     <div class="skill-item">
                         <i class="devicon-react-original colored text-5xl mb-3"></i>
                         <span class="text-sm font-bold">React.js</span>
@@ -128,7 +130,7 @@
 
             <div class="glass p-8 md:p-12 rounded-[2.5rem]">
                 <h3 class="text-center text-xl font-bold mb-10 text-emerald-500 uppercase tracking-[0.2em]">Backend</h3>
-                <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-6 md:gap-12">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-12">
                     <div class="skill-item">
                         <i class="devicon-nodejs-plain colored text-5xl mb-3"></i>
                         <span class="text-sm font-bold">Node.js</span>
@@ -146,7 +148,7 @@
 
             <div class="glass p-8 md:p-12 rounded-[2.5rem]">
                 <h3 class="text-center text-xl font-bold mb-10 text-amber-500 uppercase tracking-[0.2em]">Database</h3>
-                <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-6 md:gap-12">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-12">
                     <div class="skill-item">
                         <i class="devicon-mongodb-plain colored text-5xl mb-3"></i>
                         <span class="text-sm font-bold">MongoDB</span>
@@ -160,7 +162,7 @@
 
             <div class="glass p-8 md:p-12 rounded-[2.5rem]">
                 <h3 class="text-center text-xl font-bold mb-10 text-rose-500 uppercase tracking-[0.2em]">Cloud & Tools</h3>
-                <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-6 md:gap-12">
+                <div class="flex flex-wrap justify-center gap-6 md:gap-12">
                     <div class="skill-item">
                         <i class="devicon-git-plain colored text-5xl mb-3"></i>
                         <span class="text-sm font-bold">Git</span>
@@ -185,9 +187,9 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-10">
-            <div class="glass p-6 md:p-8 rounded-[2.5rem]">
+            <div class="glass p-8 rounded-[2.5rem]">
                 <h3 class="text-xl font-bold mb-3">FindMyHospital – Hospital Finder Web App</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-6 text-sm md:text-base">
+                <p class="text-slate-500 dark:text-slate-400 mb-6">
                     A React-based web application that helps users find hospitals based on treatment, location, and insurance. Features dynamic filtering, reusable components, and a clean, 
                     responsive UI built with React, React Router, and Tailwind CSS.
                 </p>
@@ -204,9 +206,9 @@
                 </div>
             </div>
 
-            <div class="glass p-6 md:p-8 rounded-[2.5rem]">
+            <div class="glass p-8 rounded-[2.5rem]">
                 <h3 class="text-xl font-bold mb-3">Todo Application</h3>
-                <p class="text-slate-500 dark:text-slate-400 mb-6 text-sm md:text-base">
+                <p class="text-slate-500 dark:text-slate-400 mb-6">
                     Simple task manager with CRUD operations and local storage support.
                 </p>
                 <div class="relative group rounded-2xl overflow-hidden">
@@ -226,15 +228,15 @@
 
     <footer id="contact" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200 dark:border-slate-800">
         <div class="flex flex-col items-center text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
             <p class="text-slate-500 dark:text-slate-400 mb-10 max-w-sm">I'm always open to discussing new projects or creative ideas.</p>
             
-            <div class="flex flex-col md:flex-row items-center gap-6 mb-16 w-full justify-center">
-                <a href="mailto:raghudae248@email.com" class="flex items-center gap-3 px-6 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl hover:border-accent transition-all duration-300 overflow-hidden max-w-full">
+            <div class="flex flex-col md:flex-row items-center gap-6 mb-16">
+                <a href="mailto:raghudae248@email.com" class="flex items-center gap-3 px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl hover:border-accent transition-all duration-300 max-w-full">
                     <span class="text-accent text-xl flex-shrink-0">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </span>
-                    <span class="font-bold truncate text-sm md:text-base">raghudae248@email.com</span>
+                    <span class="font-bold truncate">raghudae248@email.com</span>
                 </a>
 
                 <div class="flex gap-4">
@@ -267,7 +269,6 @@
             }
         }
         
-        // Check for saved preference or system preference
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
             document.getElementById('theme-icon').innerText = '☀️';
